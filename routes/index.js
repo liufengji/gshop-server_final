@@ -185,6 +185,7 @@ router.get('/shops', function (req, res) {
 
 router.get('/search_shops', function (req, res) {
   const {geohash, keyword} = req.query
+  console.log(keyword)
   ajax('http://cangdu.org:8001/v4/restaurants', {
     'extras[]': 'restaurant_activity',
     geohash,
